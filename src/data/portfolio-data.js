@@ -19,13 +19,15 @@ const portfolioData = {
   },
 
   skills: {
-    frontend: ["React", "Vite", "Tailwind CSS", "JavaScript"],
-    backend: [
+    languages: ["Java", "Python", "C"],
+        webDevelopment: [
+      "Tailwind CSS",
+      "React",
       "Node.js",
-      "Express.js",
+      "Express",
       "MongoDB",
-      "SQL",
     ],
+
     tools: [
       "Git & GitHub",
       "Vercel",
