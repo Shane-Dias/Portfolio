@@ -24,13 +24,14 @@ const portfolioData = {
       "Node.js",
       "Express.js",
       "MongoDB",
-      "PostgreSQL",
+      "SQL",
     ],
     tools: [
       "Git & GitHub",
       "Vercel",
       "Postman",
       "Canva",
+      "Render"
     ],
   },
 
