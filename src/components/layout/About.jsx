@@ -1,6 +1,7 @@
 import SectionTitle from "../ui/SectionTitle";
 import { motion } from "framer-motion";
 import portfolioData from "../../data/portfolio-data";
+import { fadeInUp, staggerContainer } from "../../utils/motion-variants";
 
 const About = () => (
   <section id="about" className="relative py-32 px-6 bg-gray-900">
@@ -8,10 +9,10 @@ const About = () => (
       <SectionTitle>About Me</SectionTitle>
 
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={fadeInUp.initial}
+        whileInView={fadeInUp.animate}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={fadeInUp.transition}
         className="space-y-8"
       >
         <p className="text-lg text-gray-300 leading-relaxed">
@@ -22,10 +23,10 @@ const About = () => (
           {portfolioData.about.highlights.map((highlight, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={fadeInUp.initial}
+              whileInView={fadeInUp.animate}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ ...fadeInUp.transition, delay: i * 0.1 }}
               className="p-6 rounded-lg bg-gray-800/50 border border-gray-800 hover:border-gray-700 transition-colors"
             >
               <p className="text-gray-300 font-medium">{highlight}</p>
