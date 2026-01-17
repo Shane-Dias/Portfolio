@@ -6,8 +6,8 @@ import { ExternalLink } from "lucide-react";
 const Projects = () => (
   <section id="projects" className="relative py-32 px-6 bg-gray-900">
     <div className="max-w-6xl mx-auto">
-      <SectionTitle subtitle="Selected work from the past few years">
-        Featured Projects
+      <SectionTitle >
+        Projects
       </SectionTitle>
 
       <div className="space-y-8">
