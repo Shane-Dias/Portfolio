@@ -19,94 +19,97 @@ const Hero = () => {
 
   // Particles initialization
   const particlesInit = useCallback(async (engine) => {
-      await loadSlim(engine);
-    }, []);
-  
-    const particlesOptions = {
-      background: {
-        color: {
-          value: "transparent",
+    await loadSlim(engine);
+  }, []);
+
+  const particlesOptions = {
+    background: {
+      color: {
+        value: "transparent",
+      },
+    },
+    fpsLimit: 120,
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "connect",
+        },
+        resize: true,
+      },
+      modes: {
+        connect: {
+          distance: 80,
+          links: {
+            opacity: 0.3,
+          },
+          radius: 200,
         },
       },
-      fpsLimit: 120,
-      interactivity: {
-        events: {
-          onHover: {
-            enable: true,
-            mode: "connect",
-          },
-          resize: true,
+    },
+    particles: {
+      color: {
+        value: ["#60a5fa", "#a78bfa", "#34d399", "#fbbf24"],
+      },
+      links: {
+        color: "#60a5fa",
+        distance: 120,
+        enable: true,
+        opacity: 0.15,
+        width: 1,
+        blink: true,
+        frequency: 1,
+      },
+      move: {
+        direction: "none",
+        enable: true,
+        outModes: {
+          default: "bounce",
         },
-        modes: {
-          connect: {
-            distance: 80,
-            links: {
-              opacity: 0.3,
-            },
-            radius: 200,
-          },
+        random: true,
+        speed: 0.8,
+        straight: false,
+        trail: {
+          enable: true,
+          length: 10,
+          fillColor: "#000000",
         },
       },
-      particles: {
-        color: {
-          value: ["#60a5fa", "#a78bfa", "#34d399", "#fbbf24"],
-        },
-        links: {
-          color: "#60a5fa",
-          distance: 120,
+      number: {
+        density: {
           enable: true,
-          opacity: 0.15,
-          width: 1,
-          blink: true,
-          frequency: 1,
+          area: 1000,
         },
-        move: {
-          direction: "none",
+        value: 60,
+      },
+      opacity: {
+        value: 0.25,
+        animation: {
           enable: true,
-          outModes: {
-            default: "bounce",
-          },
-          random: true,
-          speed: 0.8,
-          straight: false,
-          trail: {
-            enable: true,
-            length: 10,
-            fillColor: "#000000",
-          },
-        },
-        number: {
-          density: {
-            enable: true,
-            area: 1000,
-          },
-          value: 60,
-        },
-        opacity: {
-          value: 0.25,
-          animation: {
-            enable: true,
-            speed: 1,
-            minimumValue: 0.1,
-          },
-        },
-        shape: {
-          type: ["circle", "triangle", "polygon"],
-        },
-        size: {
-          value: { min: 1, max: 3 },
-        },
-        wobble: {
-          enable: true,
-          distance: 10,
-          speed: 0.5,
+          speed: 1,
+          minimumValue: 0.1,
         },
       },
-      detectRetina: true,
-    };
+      shape: {
+        type: ["circle", "triangle", "polygon"],
+      },
+      size: {
+        value: { min: 1, max: 3 },
+      },
+      wobble: {
+        enable: true,
+        distance: 10,
+        speed: 0.5,
+      },
+    },
+    detectRetina: true,
+  };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-950 via-gray-900 to-gray-900">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-gray-950 via-gray-900 to-gray-900"
+    >
       {/* Animated Particles Background */}
       <Particles
         id="tsparticles"

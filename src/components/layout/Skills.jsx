@@ -37,7 +37,7 @@ const Skills = () => {
       className="relative py-20 md:py-32 px-4 md:px-6 bg-gray-950"
     >
       <div className="max-w-6xl mx-auto">
-        <div className="flex items-center gap-3 mb-12">
+        <div className="relative flex items-center gap-3 mb-12">
           <div className="absolute -left-4 top-0 w-1 h-12 bg-gradient-to-b from-blue-500 to-transparent" />
           <SectionTitle className="text-left">Technical Stack</SectionTitle>
         </div>
@@ -90,8 +90,9 @@ const Skills = () => {
                 ))}
               </div>
 
-              {/* Show count */}
-              <div className="flex items-center gap-2 text-xs text-gray-500">
+              {/* Optional: Show count */}
+              <div className="flex items-center gap-2 text-sm text-gray-500 mt-2">
+                <ChevronRight className="w-4 h-4" />
                 <span>{category.skills.length} technologies</span>
               </div>
             </motion.div>
