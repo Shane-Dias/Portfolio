@@ -75,15 +75,17 @@ const About = () => {
           <div className="lg:w-2/5">
             <div className="relative">
               <div className="absolute -left-4 top-0 w-1 h-12 bg-gradient-to-b from-blue-500 to-transparent" />
-              <SectionTitle className="text-left mb-6">
-                About Me
-              </SectionTitle>
+              <SectionTitle className="text-left mb-6">About Me</SectionTitle>
             </div>
 
             <motion.p
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{
+                once: false,
+                amount: 0.2,
+                margin: "-50px",
+              }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-gray-400 text-lg leading-relaxed italic pl-4 border-l-2 border-gray-800"
             >
@@ -96,7 +98,11 @@ const About = () => {
             <motion.div
               initial={fadeInUp.initial}
               whileInView={fadeInUp.animate}
-              viewport={{ once: true }}
+              viewport={{
+                once: false,
+                amount: 0.2,
+                margin: "-50px",
+              }}
               transition={fadeInUp.transition}
             >
               <p className="text-gray-300 leading-relaxed text-lg mb-10">
@@ -107,7 +113,11 @@ const About = () => {
                 variants={staggerContainer}
                 initial="initial"
                 whileInView="animate"
-                viewport={{ once: true }}
+                viewport={{
+                  once: false,
+                  amount: 0.2,
+                  margin: "-50px",
+                }}
                 className="space-y-6"
               >
                 {portfolioData.about.highlights.map((highlight, i) => (
@@ -137,7 +147,11 @@ const About = () => {
             <motion.div
               initial={{ opacity: 0, width: 0 }}
               whileInView={{ opacity: 1, width: "100%" }}
-              viewport={{ once: true }}
+              viewport={{
+                once: false,
+                amount: 0.2,
+                margin: "-50px",
+              }}
               transition={{ delay: 0.8, duration: 1 }}
               className="mt-12 pt-8 border-t border-gray-800"
             >

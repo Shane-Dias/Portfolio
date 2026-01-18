@@ -46,7 +46,11 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{
+              once: false,
+              amount: 0.2,
+              margin: "-50px",
+            }}
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
@@ -76,7 +80,11 @@ const Contact = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{
+              once: false,
+              amount: 0.2,
+              margin: "-50px",
+            }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
@@ -121,7 +129,11 @@ const Contact = () => {
                     rel="noopener noreferrer"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{
+                      once: false,
+                      amount: 0.2,
+                      margin: "-50px",
+                    }}
                     transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
                     className="group relative"
                   >
@@ -155,7 +167,11 @@ const Contact = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{
+            once: false,
+            amount: 0.2,
+            margin: "-50px",
+          }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-20 text-center"
         ></motion.div>

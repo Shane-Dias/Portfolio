@@ -9,7 +9,6 @@ const Hero = () => {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
 
-  // Smooth scroll function
   const smoothScroll = (e, targetId) => {
     e.preventDefault();
     const target = document.querySelector(targetId);
