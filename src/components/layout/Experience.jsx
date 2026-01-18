@@ -5,6 +5,7 @@ import portfolioData from "../../data/portfolio-data";
 const Experience = () => (
   <section id="experience" className="relative py-32 px-6 bg-gray-950">
     <div className="max-w-4xl mx-auto">
+      <div className="absolute -left-4 top-0 w-1 h-12 bg-gradient-to-b from-blue-500 to-transparent" />
       <SectionTitle>Experience & Achievements</SectionTitle>
 
       <div className="space-y-6">

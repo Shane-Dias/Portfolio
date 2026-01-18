@@ -6,9 +6,8 @@ import { ExternalLink } from "lucide-react";
 const Projects = () => (
   <section id="projects" className="relative py-32 px-6 bg-gray-900">
     <div className="max-w-6xl mx-auto">
-      <SectionTitle >
-        Projects
-      </SectionTitle>
+      <div className="absolute -left-4 top-0 w-1 h-12 bg-gradient-to-b from-blue-500 to-transparent" />
+      <SectionTitle>Projects</SectionTitle>
 
       <div className="space-y-8">
         {portfolioData.projects.map((project, i) => (

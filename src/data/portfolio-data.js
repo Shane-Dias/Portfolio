@@ -95,6 +95,7 @@ const portfolioData = {
       linkedin: "https://www.linkedin.com/in/shane-dias-28a112291",
       twitter: "https://twitter.com/",
     },
+    location:"Mumbai, Maharashtra"
   },
 };
 
