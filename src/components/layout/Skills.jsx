@@ -42,65 +42,56 @@ const Skills = () => {
           <SectionTitle className="text-left">Technical Stack</SectionTitle>
         </div>
 
-        {/* Vertical timeline layout */}
-        <div className="space-y-12">
+        {/* Grid layout for skill categories */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {skillCategories.map((category, catIndex) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: catIndex * 0.2 }}
-              className="relative pl-10 md:pl-16"
+              transition={{ duration: 0.6, delay: catIndex * 0.1 }}
+              className="relative p-6 rounded-lg border border-gray-800 bg-gray-900/30 hover:border-gray-700 transition-colors"
             >
-              {/* Timeline dot */}
-              <div className="absolute left-0 top-0">
+              {/* Icon header */}
+              <div className="flex items-center gap-3 mb-6">
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center ${category.bgAccent} border ${category.borderAccent}`}
+                  className={`w-10 h-10 rounded-lg flex items-center justify-center ${category.bgAccent} border ${category.borderAccent}`}
                 >
-                  <category.icon className={`w-4 h-4 ${category.accent}`} />
+                  <category.icon className={`w-5 h-5 ${category.accent}`} />
                 </div>
-              </div>
-
-              {/* Connecting line (except last) */}
-              {catIndex < skillCategories.length - 1 && (
-                <div className="absolute left-4 top-8 bottom-0 w-px bg-gradient-to-b from-gray-800 to-transparent" />
-              )}
-
-              {/* Category content */}
-              <div className="mb-6">
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3 className="text-lg font-semibold text-white">
                   {category.title}
                 </h3>
-                <p className="text-gray-400 text-sm">
-                  {catIndex === 0 && "Core programming foundations"}
-                  {catIndex === 1 && "Frontend & backend expertise"}
-                  {catIndex === 2 && "Development workflow & deployment"}
-                </p>
               </div>
 
-              {/* Skills displayed horizontally as a flowing list */}
+              {/* Description */}
+              <p className="text-gray-400 text-sm mb-4">
+                {catIndex === 0 && "Core programming foundations"}
+                {catIndex === 1 && "Frontend & backend expertise"}
+                {catIndex === 2 && "Development workflow & deployment"}
+              </p>
+
+              {/* Skills displayed as wrapping tags */}
               <div className="flex flex-wrap items-center gap-2 mb-4">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill}
-                    initial={{ opacity: 0, scale: 0.95 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: false }}
-                    transition={{ duration: 0.3, delay: skillIndex * 0.05 }}
+                    transition={{ duration: 0.3, delay: skillIndex * 0.03 }}
                     className="relative group"
                   >
-                    <span className="px-4 py-2 text-sm bg-gray-900/50 text-gray-300 rounded-lg border border-gray-800 group-hover:border-gray-700 transition-colors">
+                    <span className="px-3 py-1.5 text-xs bg-gray-800/50 text-gray-300 rounded-md border border-gray-700 group-hover:border-gray-600 group-hover:bg-gray-800 transition-colors">
                       {skill}
                     </span>
-                    <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-px bg-gradient-to-r from-transparent via-current to-transparent group-hover:w-16 transition-all duration-300" />
                   </motion.div>
                 ))}
               </div>
 
-              {/* Optional: Show count */}
-              <div className="flex items-center gap-2 text-sm text-gray-500 mt-2">
-                <ChevronRight className="w-4 h-4" />
+              {/* Show count */}
+              <div className="flex items-center gap-2 text-xs text-gray-500">
                 <span>{category.skills.length} technologies</span>
               </div>
             </motion.div>
