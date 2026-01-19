@@ -12,29 +12,14 @@ const portfolioData = {
 
   about: {
     text: "I'm a third-year Computer Engineering student and full-stack MERN developer with a strong interest in building impactful, real-world products. I enjoy working across the stack—from designing intuitive user interfaces to architecting robust backend systems. I’ve participated in multiple hackathons and ideathons, where I focused on solving practical problems using modern web technologies. I value clean code, scalability, and continuous learning.",
-    highlights: [
-      "Full-stack MERN developer",
-      "Winner of 4+ hackathons",
-    ],
+    highlights: ["Full-stack MERN developer", "Winner of 4+ hackathons"],
   },
 
   skills: {
     languages: ["Java", "Python", "C"],
-        webDevelopment: [
-      "Tailwind CSS",
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-    ],
+    webDevelopment: ["Tailwind CSS", "React", "Node.js", "Express", "MongoDB"],
 
-    tools: [
-      "Git & GitHub",
-      "Vercel",
-      "Postman",
-      "Canva",
-      "Render"
-    ],
+    tools: ["Git & GitHub", "Vercel", "Postman", "Canva", "Render"],
   },
 
   projects: [
@@ -66,25 +51,25 @@ const portfolioData = {
 
   experience: [
     {
-      title: "Hackathon Winner",
+      title: "Winner – Hackathon",
       company: "Tech-Mania 2K25",
       period: "2025",
       description:
-        "Presented BharatSecure with a working prototype and won 1st place among multiple competing teams.",
+        "Designed and built BharatSecure, a real-time incident reporting and response platform. Implemented location-based alerts, safety analytics, and an AI-powered assistance module, leading to a 1st place finish among competing teams.",
     },
     {
-      title: "Finalist",
-      company: "TechFiesta – PICT Pune",
+      title: "Runner-Up – Hackathon",
+      company: "Oscillation Hackathon",
       period: "2025",
       description:
-        "Shortlisted among 60 teams out of ~400 for the BharatSecure project.",
+        "Developed TravelSafeAI, a personalized travel safety system that analyzes routes using crime data, weather alerts, and AI-driven risk assessment. Secured runner-up position for technical depth and real-world applicability.",
     },
     {
-      title: "Full-Stack Developer (Academic Projects)",
-      company: "Engineering Projects & Hackathons",
-      period: "2023 - Present",
+      title: "Full-Stack Developer",
+      company: "Academic & Hackathon Projects",
+      period: "2023 – Present",
       description:
-        "Built multiple full-stack applications using MERN, focusing on scalability, security, and clean UI.",
+        "Built and deployed multiple full-stack applications using the MERN stack. Focused on clean architecture, secure authentication flows, API design, and scalable frontend interfaces.",
     },
   ],
 
@@ -95,7 +80,7 @@ const portfolioData = {
       linkedin: "https://www.linkedin.com/in/shane-dias-28a112291",
       twitter: "https://twitter.com/",
     },
-    location:"Mumbai, Maharashtra"
+    location: "Mumbai, Maharashtra",
   },
 };
 
