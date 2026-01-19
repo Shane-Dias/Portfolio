@@ -19,6 +19,7 @@ const Experience = () => (
         viewport={{ once: false }}
         transition={{ duration: 0.6 }}
       >
+        <div className="absolute -left-4 top-0 w-1 h-12 bg-gradient-to-b from-blue-500 to-transparent" />
         <SectionTitle>Experience & Achievements</SectionTitle>
       </motion.div>
 
