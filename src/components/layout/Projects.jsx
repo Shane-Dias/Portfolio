@@ -76,7 +76,7 @@ const Projects = () => {
                       </motion.div>
                     </div>
 
-                    <p className="text-gray-300 mb-6 leading-relaxed text-base md:text-lg">
+                    <p className="text-gray-300 mb-6 leading-relaxed text-base md:text-base">
                       {project.description}
                     </p>
 
