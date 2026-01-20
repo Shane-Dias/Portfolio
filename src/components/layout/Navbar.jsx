@@ -101,10 +101,10 @@ const Navbar = () => {
 
               {/* CTA Button */}
               <motion.a
-                href="#contact"
+                onClick={() => handleNavClick("contact")}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="ml-4 px-5 py-2 text-sm font-medium rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
+                className="ml-4 px-5 py-2 text-sm font-medium rounded-lg bg-gradient-to-r cursor-pointer from-blue-500 to-purple-500 text-white hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
               >
                 Let's Talk
               </motion.a>
