@@ -7,21 +7,26 @@ import { useState } from "react";
 const Projects = () => {
   const [visibleCount, setVisibleCount] = useState(3);
   const ITEMS_PER_LOAD = 3;
-  
+
   const showMore = () => {
-    setVisibleCount(prev => Math.min(prev + ITEMS_PER_LOAD, portfolioData.projects.length));
+    setVisibleCount((prev) =>
+      Math.min(prev + ITEMS_PER_LOAD, portfolioData.projects.length),
+    );
   };
-  
+
   const hasMore = visibleCount < portfolioData.projects.length;
   const visibleProjects = portfolioData.projects.slice(0, visibleCount);
 
   return (
-    <section id="projects" className="relative py-32 px-6 bg-gray-900 overflow-hidden">
+    <section
+      id="projects"
+      className="relative py-32 px-6 bg-gray-900 overflow-hidden"
+    >
       {/* Ambient background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-blue-500/5" />
       <div className="absolute top-1/3 -left-48 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/3 -right-48 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-      
+
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,14 +51,14 @@ const Projects = () => {
               >
                 {/* Glow effect on hover */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl opacity-0 group-hover:opacity-10 blur transition-all duration-500" />
-                
+
                 <div className="relative p-8 md:p-10 rounded-2xl bg-gradient-to-br from-gray-800/80 to-gray-800/40 border border-gray-700 hover:border-gray-600 transition-all duration-300 backdrop-blur-sm overflow-hidden">
                   {/* Animated gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-purple-500/0 to-blue-500/0 group-hover:from-blue-500/5 group-hover:via-purple-500/5 group-hover:to-blue-500/5 transition-all duration-700" />
-                  
+
                   {/* Top corner decoration */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
+
                   {/* Left accent bar */}
                   <div className="absolute left-0 top-8 bottom-8 w-1 bg-gradient-to-b from-blue-500 to-purple-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500" />
 
@@ -67,12 +72,21 @@ const Projects = () => {
                           {project.title}
                         </h3>
                       </div>
-                      
+
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         className="p-2 rounded-lg bg-gray-700/50 hover:bg-gray-700 border border-gray-600 cursor-pointer transition-colors"
                       >
-                        <ExternalLink className="text-gray-400 group-hover:text-blue-400 transition-colors" size={20} />
+                        <a
+                          href={portfolioData.projects[i].link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink
+                            className="text-gray-400 group-hover:text-blue-400 transition-colors"
+                            size={20}
+                          />
+                        </a>  
                       </motion.div>
                     </div>
 
@@ -95,7 +109,10 @@ const Projects = () => {
                     </div>
 
                     <div className="flex items-start gap-3 p-4 rounded-lg bg-gradient-to-r from-blue-500/5 to-purple-500/5 border border-blue-500/20">
-                      <Sparkles className="text-blue-400 mt-0.5 flex-shrink-0" size={18} />
+                      <Sparkles
+                        className="text-blue-400 mt-0.5 flex-shrink-0"
+                        size={18}
+                      />
                       <p className="text-sm text-gray-300 font-medium">
                         {project.impact}
                       </p>
@@ -126,7 +143,7 @@ const Projects = () => {
             >
               {/* Button glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/20 group-hover:to-purple-500/20 transition-all duration-300" />
-              
+
               <div className="relative flex items-center gap-3">
                 <span className="text-white font-semibold">
                   Load More Projects
@@ -150,8 +167,13 @@ const Projects = () => {
           className="mt-8 text-center"
         >
           <p className="text-gray-500 text-sm">
-            Showing <span className="text-blue-400 font-semibold">{visibleCount}</span> of{" "}
-            <span className="text-purple-400 font-semibold">{portfolioData.projects.length}</span> projects
+            Showing{" "}
+            <span className="text-blue-400 font-semibold">{visibleCount}</span>{" "}
+            of{" "}
+            <span className="text-purple-400 font-semibold">
+              {portfolioData.projects.length}
+            </span>{" "}
+            projects
           </p>
         </motion.div>
       </div>

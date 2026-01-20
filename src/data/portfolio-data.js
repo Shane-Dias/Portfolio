@@ -30,6 +30,16 @@ const portfolioData = {
       tech: ["React", "Django", "SQLite", "AI Integration"],
       impact:
         "Won 1st prize at Tech-Mania 2K25 and shortlisted for TechFiesta Grand Finale at PICT Pune",
+      link: "https://github.com/BharatSecure/TechFiesta25",
+    },
+    {
+      title: "BrightBuilds",
+      description:
+        "A full-stack platform for showcasing student-led creative coding projects, mapped to United Nations Sustainable Development Goals (SDGs) to promote sustainability, mentorship, and skill visibility.",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+      impact:
+        "Implemented role-based dashboards, project evaluation workflows, and SDG-based categorization to support collaboration and structured feedback.",
+      link: "https://github.com/Shane-Dias/BrightBuilds",
     },
     {
       title: "NearKart",
@@ -38,6 +48,7 @@ const portfolioData = {
       tech: ["React", "Node.js", "Express", "MongoDB"],
       impact:
         "Designed scalable seller & buyer flows with OTP-based authentication",
+      link: "https://github.com/Shane-Dias/NearKart",
     },
     {
       title: "Dynamic Personalized Travel Safety Guide",
@@ -46,6 +57,7 @@ const portfolioData = {
       tech: ["React", "Node.js", "MongoDB", "Gemini LLM"],
       impact:
         "Focused on proactive safety insights and alternate safe-route suggestions",
+      link: "https://github.com/Shane-Dias/TravelSafeAI",
     },
   ],
 
